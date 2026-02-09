@@ -29,7 +29,7 @@ class CustomTxtFrmField extends StatelessWidget {
           mainLabel,
           style: TextStyle(fontSize: 20, color: const Color(0xFF504747)),
         ),
-        const SizedBox(height: 15),
+        const SizedBox(height: 8),
         TextFormField(
           keyboardType: TextInputType.emailAddress,
           autofocus: true,

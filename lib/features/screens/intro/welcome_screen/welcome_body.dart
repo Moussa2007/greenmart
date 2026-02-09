@@ -12,6 +12,7 @@ class WelcomeBody extends StatefulWidget {
 }
 
 class _WelcomeBodyState extends State<WelcomeBody> {
+  
   double get screenWidth => MediaQuery.of(context).size.width;
   double get screenHeight => MediaQuery.of(context).size.height;
 
@@ -29,7 +30,7 @@ class _WelcomeBodyState extends State<WelcomeBody> {
           Positioned(
             bottom: screenHeight * 0.4,
             left: screenWidth * 0.45,
-            child: Logo(),
+            child: Logo(color: AppColors.whiteColor),
           ),
           Positioned(
             top: 480,

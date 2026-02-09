@@ -15,12 +15,7 @@ class GreenApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashView(),
-      // initialRoute: '/',
-      // routes: {
-      //   '/': (context) => SplashView(),
-      //   'welcome': (context) => WelcomeView(),
-      //   'login': (context) => LoginView(),
-      //}, // SplashView(),
+
     );
   }
 }

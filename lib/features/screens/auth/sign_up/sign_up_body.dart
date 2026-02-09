@@ -2,20 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:greenmart/core/app_colors.dart';
 import 'package:greenmart/core/custom_txt_frm_field.dart';
 import 'package:greenmart/core/logo.dart';
-import 'package:greenmart/features/screens/auth/sign_up/sign_up_view.dart';
+import 'package:greenmart/features/screens/auth/login/logn_view.dart';
 import 'package:greenmart/features/utils/navigation.dart';
 
-class LoginBody extends StatefulWidget {
-  const LoginBody({super.key});
+class SignUpBody extends StatefulWidget {
+  const SignUpBody({super.key});
 
   @override
-  State<LoginBody> createState() => _LoginBodyState();
+  State<SignUpBody> createState() => _SignUpBodyState();
 }
 
-class _LoginBodyState extends State<LoginBody> {
+class _SignUpBodyState extends State<SignUpBody> {
   bool passVisibility = false;
   bool passVisibility1 = false;
   String textType = "";
+
+  TextEditingController nameController = TextEditingController();
+  TextEditingController titleController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   TextEditingController passwordController1 = TextEditingController();
@@ -24,8 +27,11 @@ class _LoginBodyState extends State<LoginBody> {
   @override
   void dispose() {
     super.dispose();
+    nameController.dispose();
+    titleController.dispose();
     emailController.dispose();
     passwordController.dispose();
+    passwordController1.dispose();
   }
 
   @override
@@ -39,16 +45,36 @@ class _LoginBodyState extends State<LoginBody> {
           key: _formKey,
           child: ListView(
             children: [
-              const SizedBox(height: 70),
+              const SizedBox(height: 20),
               Center(child: Logo(color: AppColors.redColor)),
-              const SizedBox(height: 30),
+              const SizedBox(height: 10),
               Text(
-                'Login',
+                'Sign Up',
                 style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
               ),
 
-              const SizedBox(height: 20),
-
+              const SizedBox(height: 10),
+              CustomTxtFrmField(
+                mainLabel: "Name",
+                myController: nameController,
+                hintText: "Enter your name",
+                suffix: IconButton(onPressed: () {}, icon: Icon(Icons.person)),
+                passVisibility: passVisibility,
+                txtType: TextInputType.text,
+              ),
+              const SizedBox(height: 10),
+              CustomTxtFrmField(
+                mainLabel: "Title",
+                myController: titleController,
+                hintText: "Enter your title",
+                suffix: IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.percent_outlined),
+                ),
+                passVisibility: passVisibility,
+                txtType: TextInputType.text,
+              ),
+              const SizedBox(height: 10),
               CustomTxtFrmField(
                 mainLabel: "Email",
                 myController: emailController,
@@ -57,7 +83,7 @@ class _LoginBodyState extends State<LoginBody> {
                 passVisibility: passVisibility,
                 txtType: TextInputType.emailAddress,
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               CustomTxtFrmField(
                 mainLabel: "Password",
                 myController: passwordController,
@@ -75,23 +101,22 @@ class _LoginBodyState extends State<LoginBody> {
                 passVisibility: !passVisibility,
                 txtType: TextInputType.text,
               ),
-              Container(
-                alignment: Alignment.centerRight,
-                width: double.infinity,
-                child: TextButton(
+              const SizedBox(height: 10),
+              CustomTxtFrmField(
+                mainLabel: "Re-Password",
+                myController: passwordController1,
+                hintText: "Re-enter your password",
+                suffix: IconButton(
                   onPressed: () {},
-                  child: Text(
-                    'Forgot Password?',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.blue[900],
-                      fontWeight: FontWeight.bold,
-                    ),
+                  icon: Icon(
+                    passVisibility ? Icons.visibility : Icons.visibility_off,
                   ),
                 ),
+                passVisibility: !passVisibility,
+                txtType: TextInputType.text,
               ),
 
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
 
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
@@ -102,43 +127,19 @@ class _LoginBodyState extends State<LoginBody> {
                 ),
                 onPressed: () {},
                 child: Text(
-                  'Login',
+                  'Sign Up',
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
               ),
 
-              const SizedBox(height: 20),
-              Center(child: Text('Or', style: TextStyle(fontSize: 22))),
+              const SizedBox(height: 10),
 
-              GestureDetector(
-                onTap: () {},
-                child: SizedBox(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Login with',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(width: 5),
-                      Image.asset(
-                        width: 60,
-                        height: 90,
-                        'assets/images/google.png',
-                      ),
-                    ],
-                  ),
-                ),
-              ),
               SizedBox(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Don't have an account?",
+                      "Do you have an account?",
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
@@ -146,10 +147,10 @@ class _LoginBodyState extends State<LoginBody> {
                     ),
                     TextButton(
                       onPressed: () {
-                        pushTo(context, SignUpView());
+                        pushTo(context, LoginView());
                       },
                       child: Text(
-                        "Register",
+                        "Login",
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,

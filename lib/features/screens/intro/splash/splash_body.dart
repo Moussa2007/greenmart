@@ -57,7 +57,7 @@ class _SplashBodyState extends State<SplashBody> with TickerProviderStateMixin {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Logo(),
+                  Logo(color: AppColors.whiteColor),
                   Text(
                     'GREENMART',
                     style: TextStyle(
