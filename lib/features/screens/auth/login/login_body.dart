@@ -54,7 +54,7 @@ class _LoginBodyState extends State<LoginBody> {
                 myController: emailController,
                 hintText: "Enter your email address",
                 suffix: IconButton(onPressed: () {}, icon: Icon(Icons.email)),
-                passVisibility: passVisibility,
+                passVisibility: passVisibility1,
                 txtType: TextInputType.emailAddress,
               ),
               const SizedBox(height: 20),

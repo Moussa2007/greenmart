@@ -32,7 +32,7 @@ class CustomTxtFrmField extends StatelessWidget {
         const SizedBox(height: 8),
         TextFormField(
           keyboardType: TextInputType.emailAddress,
-          autofocus: true,
+          //autofocus: true,
           controller: myController,
           obscureText: passVisibility,
           decoration: InputDecoration(

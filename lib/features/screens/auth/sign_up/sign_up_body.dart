@@ -43,6 +43,7 @@ class _SignUpBodyState extends State<SignUpBody> {
         height: double.maxFinite,
         child: Form(
           key: _formKey,
+
           child: ListView(
             children: [
               const SizedBox(height: 20),
@@ -116,7 +117,7 @@ class _SignUpBodyState extends State<SignUpBody> {
                 txtType: TextInputType.text,
               ),
 
-              const SizedBox(height: 10),
+              const SizedBox(height: 20),
 
               ElevatedButton(
                 style: ElevatedButton.styleFrom(

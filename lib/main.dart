@@ -15,7 +15,6 @@ class GreenApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashView(),
-
     );
   }
 }
