@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:greenmart/core/app_colors.dart';
+import 'package:greenmart/core/config/theme/app_colors.dart';
+import 'package:greenmart/core/custom_elevated_button.dart';
 import 'package:greenmart/core/custom_txt_frm_field.dart';
 import 'package:greenmart/core/logo.dart';
 import 'package:greenmart/features/screens/auth/login/logn_view.dart';
+import 'package:greenmart/features/screens/auth/mobile/mobile_view.dart';
 import 'package:greenmart/features/utils/navigation.dart';
 
 class SignUpBody extends StatefulWidget {
@@ -46,7 +48,7 @@ class _SignUpBodyState extends State<SignUpBody> {
 
           child: ListView(
             children: [
-              const SizedBox(height: 20),
+              const SizedBox(height: 8),
               Center(child: Logo(color: AppColors.redColor)),
               const SizedBox(height: 10),
               Text(
@@ -70,7 +72,7 @@ class _SignUpBodyState extends State<SignUpBody> {
                 hintText: "Enter your title",
                 suffix: IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.percent_outlined),
+                  icon: Icon(Icons.person_outline_outlined),
                 ),
                 passVisibility: passVisibility,
                 txtType: TextInputType.text,
@@ -119,19 +121,9 @@ class _SignUpBodyState extends State<SignUpBody> {
 
               const SizedBox(height: 20),
 
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  elevation: 5,
-                  backgroundColor: AppColors.primaryColor,
-                  foregroundColor: AppColors.whiteColor,
-                  padding: EdgeInsets.all(15),
-                ),
-                onPressed: () {},
-                child: Text(
-                  'Sign Up',
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                ),
-              ),
+              CustomElevatedButton(buttontxt: 'Sign Up', onpressed: () {
+                pushReplacement(context, MobileView());
+              },),
 
               const SizedBox(height: 10),
 

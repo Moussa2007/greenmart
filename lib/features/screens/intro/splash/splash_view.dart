@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:greenmart/core/app_colors.dart';
+import 'package:greenmart/core/config/theme/app_colors.dart';
 import 'package:greenmart/features/screens/intro/splash/splash_body.dart';
 
 class SplashView extends StatelessWidget {

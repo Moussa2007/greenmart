@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:greenmart/features/screens/intro/splash/splash_view.dart';
 
-
-
 void main() {
   runApp(GreenApp());
 }

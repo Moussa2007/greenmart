@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:greenmart/core/app_colors.dart';
+import 'package:greenmart/core/config/theme/app_colors.dart';
+import 'package:greenmart/core/config/theme/app_text_styles.dart';
 import 'package:greenmart/core/logo.dart';
 import 'package:greenmart/features/screens/intro/welcome_screen/welcome_view.dart';
 import 'package:greenmart/features/utils/navigation.dart';
@@ -58,15 +59,7 @@ class _SplashBodyState extends State<SplashBody> with TickerProviderStateMixin {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Logo(color: AppColors.whiteColor),
-                  Text(
-                    'GREENMART',
-                    style: TextStyle(
-                      fontFamily: 'Alegreya Sc',
-                      fontSize: 36.23,
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.whiteColor,
-                    ),
-                  ),
+                  Text('GREENMART', style: AppTextStyles.txtSplash),
                 ],
               ),
             ),

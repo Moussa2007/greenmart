@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:greenmart/core/app_colors.dart';
+import 'package:greenmart/core/config/theme/app_colors.dart';
+import 'package:greenmart/core/custom_elevated_button.dart';
 import 'package:greenmart/core/custom_txt_frm_field.dart';
 import 'package:greenmart/core/logo.dart';
 import 'package:greenmart/features/screens/auth/sign_up/sign_up_view.dart';
@@ -93,19 +94,9 @@ class _LoginBodyState extends State<LoginBody> {
 
               const SizedBox(height: 20),
 
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  elevation: 5,
-                  backgroundColor: AppColors.primaryColor,
-                  foregroundColor: AppColors.whiteColor,
-                  padding: EdgeInsets.all(15),
-                ),
-                onPressed: () {},
-                child: Text(
-                  'Login',
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                ),
-              ),
+              CustomElevatedButton(buttontxt: 'Login', onpressed: () {
+                
+              }),
 
               const SizedBox(height: 20),
               Center(child: Text('Or', style: TextStyle(fontSize: 22))),
