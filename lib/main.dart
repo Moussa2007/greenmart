@@ -1,18 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:greenmart/features/screens/intro/splash/splash_view.dart';
+import 'package:greenmart/features/screens/intro/splash/green_mart.dart';
+
 
 void main() {
-  runApp(GreenApp());
-}
-
-class GreenApp extends StatelessWidget {
-  const GreenApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SplashView(),
-    );
-  }
+  runApp(GreenMartApp());
 }

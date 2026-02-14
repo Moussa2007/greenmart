@@ -7,13 +7,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:greenmart/features/screens/intro/splash/green_mart.dart';
 
-import 'package:greenmart/main.dart';
+
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const GreenApp());
+    await tester.pumpWidget(const GreenMartApp());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

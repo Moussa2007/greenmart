@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:greenmart/core/config/theme/app_colors.dart';
 import 'package:greenmart/core/custom_elevated_button.dart';
 import 'package:greenmart/core/custom_txt_frm_field.dart';
+import 'package:greenmart/core/global/theme/app_colors.dart';
+import 'package:greenmart/core/global/theme/theme_data/theme_data_light.dart';
 import 'package:greenmart/core/logo.dart';
+import 'package:greenmart/core/utils/navigation.dart';
 import 'package:greenmart/features/screens/auth/login/logn_view.dart';
 import 'package:greenmart/features/screens/auth/mobile/mobile_view.dart';
-import 'package:greenmart/features/utils/navigation.dart';
 
 class SignUpBody extends StatefulWidget {
   const SignUpBody({super.key});
@@ -121,9 +122,12 @@ class _SignUpBodyState extends State<SignUpBody> {
 
               const SizedBox(height: 20),
 
-              CustomElevatedButton(buttontxt: 'Sign Up', onpressed: () {
-                pushReplacement(context, MobileView());
-              },),
+              CustomElevatedButton(
+                buttontxt: 'Sign Up',
+                onpressed: () {
+                  pushReplacement(context, MobileView());
+                },
+              ),
 
               const SizedBox(height: 10),
 
@@ -133,10 +137,7 @@ class _SignUpBodyState extends State<SignUpBody> {
                   children: [
                     Text(
                       "Do you have an account?",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: getTextTheme().bodySmall,
                     ),
                     TextButton(
                       onPressed: () {

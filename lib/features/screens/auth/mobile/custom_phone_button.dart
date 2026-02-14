@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:greenmart/core/config/theme/app_colors.dart';
-import 'package:greenmart/core/config/theme/app_text_styles.dart';
+import 'package:greenmart/core/global/theme/app_colors.dart';
+import 'package:greenmart/core/global/theme/theme_data/theme_data_light.dart';
 
 class CustomPhoneButton extends StatelessWidget {
   const CustomPhoneButton({
@@ -21,14 +21,14 @@ class CustomPhoneButton extends StatelessWidget {
         onTap: ontap,
         child: Container(
           decoration: BoxDecoration(
-            color: AppColors.whiteColor,
+            color: AppColors.backgroundColor,
             borderRadius: BorderRadius.circular(10),
           ),
 
           child: Column(
             children: [
-              Text(btnText, style: AppTextStyles.textMedium),
-              Text(btnText2, style: AppTextStyles.textSmall),
+              Text(btnText, style: getTextTheme().bodyMedium),
+              Text(btnText2, style: getTextTheme().bodyMedium),
             ],
           ),
         ),

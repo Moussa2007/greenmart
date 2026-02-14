@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:greenmart/core/config/theme/app_colors.dart';
+import 'package:greenmart/core/global/theme/app_colors.dart';
+import 'package:greenmart/core/global/theme/theme_data/theme_data_light.dart';
 import 'package:greenmart/core/logo.dart';
 import 'package:greenmart/features/screens/auth/login/logn_view.dart';
-import 'package:greenmart/features/utils/navigation.dart';
+import 'package:greenmart/core/utils/navigation.dart';
 
 class WelcomeBody extends StatefulWidget {
   const WelcomeBody({super.key});
@@ -12,10 +13,6 @@ class WelcomeBody extends StatefulWidget {
 }
 
 class _WelcomeBodyState extends State<WelcomeBody> {
-  
-  double get screenWidth => MediaQuery.of(context).size.width;
-  double get screenHeight => MediaQuery.of(context).size.height;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,69 +25,47 @@ class _WelcomeBodyState extends State<WelcomeBody> {
             'assets/images/welcome.png',
           ),
           Positioned(
-            bottom: screenHeight * 0.4,
-            left: screenWidth * 0.45,
-            child: Logo(color: AppColors.whiteColor),
+            top: 435,
+            left: 165,
+            child: Logo(color: AppColors.backgroundColor),
           ),
           Positioned(
-            top: 480,
-            left: (screenWidth / 2) - (260 / 2),
-            child: Text(
-              'Welcome to',
-              style: TextStyle(
-                fontFamily: 'Alegreya Sc',
-                fontSize: 40,
-                color: AppColors.whiteColor,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            top: 500,
+            left: 70,
+            child: Text('Welcome to', style: getTextTheme().displayLarge),
           ),
           Positioned(
-            top: 522,
-            left: (screenWidth / 2) - (210 / 2),
-            child: Text(
-              'our store',
-              style: TextStyle(
-                fontFamily: 'Alegreya Sc',
-                fontSize: 40,
-                color: AppColors.whiteColor,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            top: 540,
+            left: 100,
+            child: Text('our store', style: getTextTheme().displayLarge),
           ),
           Positioned(
-            top: 600,
-            left: (screenWidth / 2) - (283 / 2),
+            top: 618,
+            left: 46,
             child: Text(
               'Get your groceries in as fast as one hour',
-              style: TextStyle(
-                fontFamily: 'Alegreya Sc',
-                fontSize: 14,
-                color: AppColors.greyColor,
-              ),
+              style: getTextTheme().displaySmall,
             ),
           ),
           Positioned(
             top: 690,
-            left: (screenWidth / 2) - (320 / 2),
+            left: 27,
             child: ElevatedButton(
               onPressed: () {
                 pushReplacement(context, LoginView());
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.primaryColor,
-                fixedSize: Size(320, 60),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
               ),
               child: Text(
                 'Get Started',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.whiteColor,
-                ),
+                style: getTextTheme().displayMedium,
+
+                // TextStyle(
+                //   fontSize: 18,
+                //   fontWeight: FontWeight.bold,
+                //   color: AppColors.whiteColor,
+                // ),
               ),
             ),
           ),

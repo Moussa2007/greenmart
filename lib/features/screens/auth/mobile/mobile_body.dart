@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:greenmart/core/config/theme/app_colors.dart';
-import 'package:greenmart/core/config/theme/app_text_styles.dart';
 import 'package:greenmart/core/custom_elevated_button.dart';
+import 'package:greenmart/core/global/theme/app_colors.dart';
+import 'package:greenmart/core/global/theme/app_text_styles.dart';
+import 'package:greenmart/core/global/theme/theme_data/theme_data_light.dart';
 import 'package:greenmart/core/logo.dart';
 import 'package:greenmart/features/screens/auth/mobile/custom_phone_button.dart';
 import 'package:greenmart/features/screens/auth/verification_screen/verification_view.dart';
@@ -30,10 +31,13 @@ class _MobileBodyState extends State<MobileBody> {
           SizedBox(height: 70),
           Center(child: Logo(color: AppColors.redColor)),
           SizedBox(height: 20),
-          Text("Enter your mobile number", style: AppTextStyles.textLarge),
+          Text(
+            "Enter your mobile number",
+            style: getTextTheme().bodyMedium,
+          ), //AppTextStyles.txtHeading1),
           Text(
             'We need to verify you. We will send you a one time verification code.',
-            style: AppTextStyles.textSmall,
+            style: getTextTheme().bodySmall,
           ),
           SizedBox(height: 30),
 
@@ -42,10 +46,10 @@ class _MobileBodyState extends State<MobileBody> {
             width: double.infinity,
             height: 60,
             decoration: BoxDecoration(
-              color: AppColors.greyColor,
+              color: AppColors.textFillColor,
               borderRadius: BorderRadius.circular(20),
             ),
-            child: Text(phonetxt, style: AppTextStyles.textMedium),
+            child: Text(phonetxt, style: AppTextStyles.txtRegular),
           ),
 
           SizedBox(height: 30),
@@ -62,13 +66,18 @@ class _MobileBodyState extends State<MobileBody> {
 
           SizedBox(height: 20),
 
-          Center(child: Text("Resend confirmation code (1:23)")),
+          Center(
+            child: Text(
+              "Resend confirmation code (1:23)",
+              style: getTextTheme().bodySmall,
+            ),
+          ),
           SizedBox(height: 30),
           Container(
             width: double.infinity,
-            height: 235,
+            height: 260,
             padding: EdgeInsets.only(left: 5, right: 5),
-            color: AppColors.greyColor,
+            color: AppColors.textFillColor,
             child: Column(
               children: [
                 SizedBox(height: 5),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:greenmart/core/config/theme/app_colors.dart';
+import 'package:greenmart/core/global/theme/theme_data/theme_data_light.dart';
 
 class CustomTxtFrmField extends StatelessWidget {
   const CustomTxtFrmField({
@@ -41,12 +41,9 @@ class CustomTxtFrmField extends StatelessWidget {
               borderRadius: BorderRadius.circular(25),
             ),
             filled: true,
-            fillColor: AppColors.greyColorLight,
+            fillColor: const Color(0xFFCCD3DA),
             hintText: hintText,
-            hintStyle: TextStyle(
-              color: AppColors.blackColor,
-              fontStyle: FontStyle.italic,
-            ),
+            hintStyle: getTextTheme().bodySmall,
             contentPadding: EdgeInsets.all(15),
             suffixIcon: suffix,
           ),

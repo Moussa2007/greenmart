@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:greenmart/core/config/theme/app_colors.dart';
-
+import 'package:greenmart/core/global/theme/app_colors.dart';
 
 class CustomElevatedButton extends StatelessWidget {
-  const CustomElevatedButton({super.key, required this.buttontxt, required this.onpressed});
+  const CustomElevatedButton({
+    super.key,
+    required this.buttontxt,
+    required this.onpressed,
+  });
 
   final String buttontxt;
   final VoidCallback? onpressed;
@@ -15,10 +18,7 @@ class CustomElevatedButton extends StatelessWidget {
       height: 60,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          elevation: 5,
           backgroundColor: AppColors.primaryColor,
-          foregroundColor: AppColors.whiteColor,
-          padding: EdgeInsets.all(15),
         ),
         onPressed: onpressed,
         child: Text(

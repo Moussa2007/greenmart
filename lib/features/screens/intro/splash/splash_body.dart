@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:greenmart/core/config/theme/app_colors.dart';
-import 'package:greenmart/core/config/theme/app_text_styles.dart';
+import 'package:greenmart/core/global/theme/app_colors.dart';
+import 'package:greenmart/core/global/theme/theme_data/theme_data_light.dart';
 import 'package:greenmart/core/logo.dart';
 import 'package:greenmart/features/screens/intro/welcome_screen/welcome_view.dart';
-import 'package:greenmart/features/utils/navigation.dart';
+import 'package:greenmart/core/utils/navigation.dart';
 
 class SplashBody extends StatefulWidget {
   const SplashBody({super.key});
@@ -49,7 +49,7 @@ class _SplashBodyState extends State<SplashBody> with TickerProviderStateMixin {
       color: AppColors.primaryColor,
       child: Column(
         children: [
-          SizedBox(height: 100),
+          SizedBox(height: 130),
           AnimatedBuilder(
             animation: fadingAnimation!,
             builder: (context, _) => Opacity(
@@ -58,8 +58,8 @@ class _SplashBodyState extends State<SplashBody> with TickerProviderStateMixin {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Logo(color: AppColors.whiteColor),
-                  Text('GREENMART', style: AppTextStyles.txtSplash),
+                  Logo(color: AppColors.backgroundColor),
+                  Text('GREENMART', style: getTextTheme().headlineLarge),
                 ],
               ),
             ),
