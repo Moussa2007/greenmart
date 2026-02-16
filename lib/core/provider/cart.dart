@@ -7,20 +7,19 @@ class Cart with ChangeNotifier {
   int itemQty = 0;
   List selectedItems = [];
 
-
-
-
   void addProduct(Item product) {
     selectedItems.add(product);
     itemValue = product.price!;
-    dValue += itemValue.round();
+    dValue+= itemValue;
     
     notifyListeners();
   }
 
   void deleteItem(Item product) {
     selectedItems.remove(product);
+    itemValue = product.price!;
     dValue -= itemValue.round();
+    
 
     notifyListeners();
   }

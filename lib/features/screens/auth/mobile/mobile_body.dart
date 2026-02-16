@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:greenmart/core/custom_elevated_button.dart';
 import 'package:greenmart/core/global/theme/app_colors.dart';
-import 'package:greenmart/core/global/theme/app_text_styles.dart';
 import 'package:greenmart/core/global/theme/theme_data/theme_data_light.dart';
 import 'package:greenmart/core/logo.dart';
 import 'package:greenmart/features/screens/auth/mobile/custom_phone_button.dart';
@@ -49,7 +48,7 @@ class _MobileBodyState extends State<MobileBody> {
               color: AppColors.textFillColor,
               borderRadius: BorderRadius.circular(20),
             ),
-            child: Text(phonetxt, style: AppTextStyles.txtRegular),
+            child: Text(phonetxt, style: getTextTheme().bodyLarge),
           ),
 
           SizedBox(height: 30),

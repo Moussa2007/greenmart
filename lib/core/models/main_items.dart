@@ -6,10 +6,11 @@ class MainItems {
 }
 
 final List<MainItems> mainItems = [
-  MainItems(category: 'Vegetables', img: 'assets/images/1.jpg'),
-  MainItems(category: 'Fruits', img: 'assets/images/banana.png'),
-  MainItems(category: 'Groceries', img: 'assets/images/liptontea.png'),
-  MainItems(category: 'Meats', img: 'assets/images/9.jpg'),
-  MainItems(category: 'Chicken', img: 'assets/images/12.jpg'),
-  MainItems(category: 'Kids Stuff', img: 'assets/images/14.jpg'),
+  MainItems(category: 'All', img: 'assets/images/all.png'),
+  MainItems(category: 'Vegetables', img: 'assets/images/2.jpg'),
+  MainItems(category: 'Fruits', img: 'assets/images/fruits.png'),
+  MainItems(category: 'Groceries', img: 'assets/images/groceries.jpg'),
+  MainItems(category: 'Fish & Meat', img: 'assets/images/fishmeat.jpg'),
+  MainItems(category: 'Beverages', img: 'assets/images/beverages.jpg'),
+
 ];

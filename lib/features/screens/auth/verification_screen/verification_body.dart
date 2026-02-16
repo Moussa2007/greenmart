@@ -6,7 +6,7 @@ import 'package:greenmart/core/logo.dart';
 import 'package:greenmart/core/utils/navigation.dart';
 import 'package:greenmart/features/screens/auth/mobile/custom_phone_button.dart';
 import 'package:greenmart/features/screens/auth/verification_screen/otp_item.dart';
-import 'package:greenmart/features/screens/explore/home/home_view.dart';
+import 'package:greenmart/features/screens/explore/shop/shop_view.dart';
 
 class VerificationBody extends StatefulWidget {
   const VerificationBody({super.key});
@@ -64,7 +64,7 @@ class _VerificationBodyState extends State<VerificationBody> {
           ),
           SizedBox(height: 30),
           CustomElevatedButton(buttontxt: "Confirm", onpressed: () {
-            pushReplacement(context, HomeView());
+            pushReplacement(context, ShopView());
           }),
           SizedBox(height: 40),
 

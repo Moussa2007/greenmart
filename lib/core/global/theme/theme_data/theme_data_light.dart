@@ -5,7 +5,7 @@ import 'package:greenmart/core/global/theme/app_fonts.dart';
 ThemeData getThemeDataLight() => ThemeData(
   primaryColor: AppColors.primaryColor,
 
-  appBarTheme: AppBarTheme(backgroundColor: AppColors.appBarColor),
+  appBarTheme: AppBarTheme(backgroundColor: AppColors.backgroundColor),
 
   textButtonTheme: TextButtonThemeData(
     style: ButtonStyle(
@@ -34,6 +34,14 @@ TextTheme getTextTheme() => TextTheme(
     fontSize: 36,
     fontWeight: FontWeight.w700,
     height: 2.6,
+  ),
+
+  headlineMedium: TextStyle(
+    fontFamily: AppFonts.poppins,
+    color: AppColors.blackColor,
+    fontSize: 25,
+    fontWeight: FontWeight.w700,
+    height: 2,
   ),
 
   displayLarge: TextStyle(
@@ -76,6 +84,10 @@ TextTheme getTextTheme() => TextTheme(
     fontSize: 18,
     fontWeight: FontWeight.bold,
   ),
-
-
+  labelMedium: TextStyle(
+    fontFamily: AppFonts.poppins,
+    color: AppColors.blackColor,
+    fontSize: 18,
+    fontWeight: FontWeight.w700,
+  ),
 );
