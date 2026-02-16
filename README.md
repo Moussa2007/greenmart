@@ -27,3 +27,21 @@ The login screen also has another option to enable the user to login with google
 Until now this is the task 10, in the next task (11) I will add more screen
 
 
+![3](https://github.com/user-attachments/assets/f9ef1c1f-5fb8-4e2f-8b3a-24b3b78d2a20)
+
+![4](https://github.com/user-attachments/assets/a03ea90c-3f40-4f1d-b69a-2f47322ea104)
+
+![41](https://github.com/user-attachments/assets/883f9f07-d66d-4cd9-af44-5d5e33b83cab)
+
+![5](https://github.com/user-attachments/assets/9cb0e53b-5edf-4a0a-9b41-54bbb115fbcd)
+
+![6](https://github.com/user-attachments/assets/4318acc6-f4cb-4911-bd13-b45741d7f326)
+
+![7](https://github.com/user-attachments/assets/4ac474f4-f45f-4ebb-910c-d1b335d39939)
+
+![8](https://github.com/user-attachments/assets/819e3297-cc6f-4752-a126-93509b7c6a2f)
+
+![9](https://github.com/user-attachments/assets/85b2d144-5762-476d-9890-1c7fd565082f)
+
+
+
