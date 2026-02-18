@@ -1,6 +1,9 @@
+import 'package:flutter/material.dart';
+
 class Offers {
   final String? category;
   final String? itemName;
+  final String? tag;
   final String? itemImage;
   final double? price;
   final String? info;
@@ -10,6 +13,7 @@ class Offers {
   Offers({
     this.category,
     this.itemName,
+    required this.tag,
     this.itemImage,
     this.price,
     this.itemQty,
@@ -19,9 +23,11 @@ class Offers {
 }
 
 List<Offers> exclusiveOffers = [
+  
   Offers(
     category: 'Vegetables',
     itemName: 'Tomatoes',
+    tag: UniqueKey().toString(),
     itemImage: 'assets/images/tomatoes.png',
     itemQty: 0,
     price: 6.00,
@@ -33,6 +39,7 @@ List<Offers> exclusiveOffers = [
   Offers(
     category: 'Vegetables',
     itemName: 'Okra',
+    tag: UniqueKey().toString(),
     itemImage: 'assets/images/okra.png',
     price: 40.0,
     itemQty: 0,
@@ -44,6 +51,7 @@ List<Offers> exclusiveOffers = [
   Offers(
     category: 'Fruits',
     itemName: 'banana',
+    tag: UniqueKey().toString(),
     itemImage: 'assets/images/banana.png',
     itemQty: 0,
     price: 30.00,
@@ -55,6 +63,7 @@ List<Offers> exclusiveOffers = [
   Offers(
     category: 'Fruits',
     itemName: 'Kiwi',
+    tag: UniqueKey().toString(),
     itemImage: 'assets/images/kiwi.png',
     itemQty: 0,
     price: 80.00,
@@ -66,6 +75,7 @@ List<Offers> exclusiveOffers = [
   Offers(
     category: 'Fruits',
     itemName: 'Orange',
+    tag: UniqueKey().toString(),
     itemImage: 'assets/images/orange.png',
     itemQty: 0,
     price: 12.00,

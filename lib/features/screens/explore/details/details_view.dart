@@ -39,7 +39,12 @@ class _DetailsViewState extends State<DetailsView> {
             children: [
               Column(
                 children: [
-                  Image.asset('${widget.product.itemImage}'),
+                  Hero(
+                    transitionOnUserGestures: true,
+                    tag: widget.product.tag.toString(),
+                    child: Image.asset('${widget.product.itemImage}'),
+                  ),
+
                   SizedBox(height: 20),
 
                   Row(
@@ -198,7 +203,6 @@ class _DetailsViewState extends State<DetailsView> {
                 ),
               ),
               SizedBox(height: 20),
-
             ],
           ),
         ),

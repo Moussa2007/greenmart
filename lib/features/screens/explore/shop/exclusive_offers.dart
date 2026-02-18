@@ -4,6 +4,7 @@ import 'package:greenmart/core/global/theme/theme_data/theme_data_light.dart';
 import 'package:greenmart/core/models/exclusive_offers.dart';
 
 
+
 class ExclusiveOffersView extends StatefulWidget {
   const ExclusiveOffersView({super.key});
 
@@ -12,6 +13,15 @@ class ExclusiveOffersView extends StatefulWidget {
 }
 
 class _ExclusiveOffersViewState extends State<ExclusiveOffersView> {
+
+List<Offers> filteredEx = [];
+String? selectedItem;
+
+  @override
+  void initState() {
+    super.initState();
+    filteredEx = List.from(exclusiveOffers);
+  }
 
   @override
   Widget build(BuildContext context) {

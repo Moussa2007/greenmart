@@ -112,37 +112,46 @@ class _DisplayAllState extends State<DisplayAll> {
                   mainAxisSpacing: 10,
                 ),
                 itemCount: filteredProducts.length,
-                itemBuilder: (c, i) => GestureDetector(
-                  onTap: () {
-                    pushTo(context, DetailsView(product: filteredProducts[i]));
-                  },
-                  child: GridTile(
-                    footer: GridTileBar(
-                      backgroundColor: const Color(0x7A8C8C8D),
-                      leading: Text(
-                        "L.E. ${filteredProducts[i].price}",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      ),
-                      trailing: IconButton(
-                        onPressed: () {
-                          item?.addProduct(filteredProducts[i]);
-                        },
-                        icon: Icon(Icons.add),
-                      ),
-                      title: Center(child: Text("")),
-                    ),
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(15),
-                            child: Image.asset(filteredProducts[i].itemImage!),
+                itemBuilder: (c, i) => Hero(
+                  transitionOnUserGestures: true,
+                  tag: filteredProducts[i].tag.toString(),
+                  child: GestureDetector(
+                    onTap: () {
+                      pushTo(
+                        context,
+                        DetailsView(product: filteredProducts[i]),
+                      );
+                    },
+                    child: GridTile(
+                      footer: GridTileBar(
+                        backgroundColor: const Color(0x7A8C8C8D),
+                        leading: Text(
+                          "L.E. ${filteredProducts[i].price}",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
                           ),
                         ),
-                      ],
+                        trailing: IconButton(
+                          onPressed: () {
+                            item?.addProduct(filteredProducts[i]);
+                          },
+                          icon: Icon(Icons.add),
+                        ),
+                        title: Center(child: Text("")),
+                      ),
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(15),
+                              child: Image.asset(
+                                filteredProducts[i].itemImage!,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
