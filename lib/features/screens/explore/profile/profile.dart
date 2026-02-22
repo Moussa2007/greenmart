@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:greenmart/core/global/theme/theme_data/theme_data_light.dart';
-import 'package:greenmart/features/widgets/card_widget.dart';
+import 'package:greenmart/core/widgets/card_widget.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});

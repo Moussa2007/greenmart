@@ -4,7 +4,7 @@ import 'package:greenmart/core/global/theme/app_fonts.dart';
 import 'package:greenmart/features/screens/explore/details/selected_items.dart';
 import 'package:greenmart/features/screens/explore/exploree/display_all.dart';
 import 'package:greenmart/features/screens/explore/profile/profile.dart';
-import 'package:greenmart/features/screens/explore/shop/custom_app_bar.dart';
+import 'package:greenmart/core/widgets/custom_app_bar.dart';
 import 'package:greenmart/features/screens/explore/shop/shop_body.dart';
 
 class ShopView extends StatefulWidget {

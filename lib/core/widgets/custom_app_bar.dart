@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:greenmart/core/global/theme/app_colors.dart';
 import 'package:greenmart/core/global/theme/app_fonts.dart';
-import 'package:greenmart/core/logo.dart';
+import 'package:greenmart/core/widgets/logo.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});

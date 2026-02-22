@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:greenmart/core/global/theme/app_colors.dart';
 import 'package:greenmart/core/global/theme/theme_data/theme_data_light.dart';
-import 'package:greenmart/core/logo.dart';
+import 'package:greenmart/core/widgets/logo.dart';
 import 'package:greenmart/features/screens/auth/login/logn_view.dart';
 import 'package:greenmart/core/utils/navigation.dart';
 

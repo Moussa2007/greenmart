@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:greenmart/core/custom_elevated_button.dart';
+import 'package:greenmart/core/widgets/custom_elevated_button.dart';
 import 'package:greenmart/core/global/theme/app_colors.dart';
 import 'package:greenmart/core/global/theme/theme_data/theme_data_light.dart';
-import 'package:greenmart/core/logo.dart';
-import 'package:greenmart/features/screens/auth/mobile/custom_phone_button.dart';
+import 'package:greenmart/core/widgets/logo.dart';
+import 'package:greenmart/core/widgets/custom_phone_button.dart';
 import 'package:greenmart/features/screens/auth/verification_screen/verification_view.dart';
 
 class MobileBody extends StatefulWidget {
