@@ -43,5 +43,9 @@ Until now this is the task 10, in the next task (11) I will add more screen
 
 ![9](https://github.com/user-attachments/assets/85b2d144-5762-476d-9890-1c7fd565082f)
 
+![checout](https://github.com/user-attachments/assets/0c5a46dc-bcb3-4fe5-81b5-c0f3e17b4e36)
+
+
+![acceptorder](https://github.com/user-attachments/assets/12183a6a-5df8-4c37-8354-2a1bc01d49a8)
 
 
